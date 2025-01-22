@@ -1,0 +1,41 @@
+/* Table Styles */
+.table-container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .cutout-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .cutout-table th,
+  .cutout-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .cutout-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .cutout-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .cutout-table tr:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .cutout-table td {
+    font-size: 14px;
+  }
+  
