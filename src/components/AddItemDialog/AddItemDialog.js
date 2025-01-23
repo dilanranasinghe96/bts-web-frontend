@@ -85,57 +85,69 @@ const AddItemDialog = ({ onClose }) => {
       <div className="dialog-content">
         <h2>Add Item</h2>
         <table className="dialog-table">
-          <thead>
-            <tr>
-              <th>BNo</th>
-              <th>SO</th>
-              <th>Style</th>
-              <th>Style Name</th>
-              <th>Cut No</th>
-              <th>Colour</th>
-              <th>Size</th>
-              <th>BQty</th>
-              <th>Plant</th>
-              <th>Line</th>
-              <th>Damage Pcs</th>
-              <th>Cut Panel Shortage</th>
-              <th>Good Pcs</th>
-            </tr>
-          </thead>
+          
           <tbody>
-            {currentItem && (
-              <tr key={currentItem.Id}>
-                <td>{currentItem.bno}</td>
-                <td>{currentItem.SO}</td>
-                <td>{currentItem.Style}</td>
-                <td>{currentItem.Style_Name}</td>
-                <td>{currentItem.Cut_No}</td>
-                <td>{currentItem.Colour}</td>
-                <td>{currentItem.Size}</td>
-                <td>{currentItem.Qty}</td>
-                <td>
-                  <button className="select-btn">{currentItem.Plant}</button>
-                </td>
-                <td>
-                  <button className="select-btn">{currentItem.Line}</button>
-                </td>
-                <td>
-                  <input
-                    type="number"
-                    value={damagePcs}
-                    onChange={handleDamagePcsChange}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="number"
-                    value={cutPanelShortage}
-                    onChange={handleCutPanelShortageChange}
-                  />
-                </td>
-                <td>{goodPcs >= 0 ? goodPcs : 0}</td>
-              </tr>
-            )}
+          {
+            currentItem && (
+              <><tr key={currentItem.Id}>
+                    <th>BNo</th>
+                    <td>{currentItem.bno}</td>
+                  </tr><tr>
+                      <th>SO</th>
+                      <td>{currentItem.SO}</td>
+                    </tr><tr>
+                      <th>Style</th>
+                      <td>{currentItem.Style}</td>
+                    </tr><tr>
+                      <th>Style Name</th>
+                      <td>{currentItem.Style_Name}</td>
+                    </tr><tr>
+                      <th>Cut No</th>
+                      <td>{currentItem.Cut_No}</td>
+                    </tr><tr>
+                      <th>Colour</th>
+                      <td>{currentItem.Colour}</td>
+                    </tr><tr>
+                      <th>Size</th>
+                      <td>{currentItem.Size}</td>
+                    </tr><tr>
+                      <th>BQty</th>
+                      <td>{currentItem.Qty}</td>
+                    </tr><tr>
+                      <th>Plant</th>
+                      <td>
+                        <button className="btn btn btn-info">{currentItem.Plant}</button>
+                      </td>
+                    </tr><tr>
+                      <th>Line</th>
+                      <td>
+                        <button className="btn btn-sm btn-secondary">{currentItem.Line}</button>
+                      </td>
+                    </tr><tr>
+                      <th>Damage Pcs</th>
+                      <td>
+                        <input
+                          type="number"
+                          className="form-control form-control-sm bg-white text-black border-secondary"
+                          value={damagePcs}
+                          onChange={handleDamagePcsChange} />
+                      </td>
+                    </tr><tr>
+                      <th>Cut Panel Shortage</th>
+                      <td>
+                        <input
+                          type="number"
+                          className="form-control form-control-sm bg-white text-black border-secondary"
+                          value={cutPanelShortage}
+                          onChange={handleCutPanelShortageChange} />
+                      </td>
+
+                    </tr><tr>
+                      <th>Good Pcs</th>
+                      <td>{goodPcs >= 0 ? goodPcs : 0}</td>
+                    </tr></>
+            )
+           }
           </tbody>
         </table>
         <div className="dialog-actions">
@@ -152,3 +164,6 @@ const AddItemDialog = ({ onClose }) => {
 };
 
 export default AddItemDialog;
+
+
+

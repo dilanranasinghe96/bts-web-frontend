@@ -24,6 +24,28 @@ app.get("/api/items", (req, res) => {
   });
 });
 
+// API to fetch items by bno
+// app.get("/api/items", (req, res) => {
+//   const { code } = req.query; // Get the bno from the query parameters
+//   const sql = `SELECT * FROM cut_out WHERE bno = ?`; // Query to fetch item based on bno
+//   db.query(sql, [code], (err, result) => {
+//     if (err) return res.status(500).json(err);
+//     if (result.length === 0) return res.status(404).json({ message: "Item not found" });
+//     res.json(result); // Send item data back as response
+//   });
+// });
+
+
+
+
+app.get("/api/fg", (req, res) => {
+  const sql = "SELECT * FROM fg";
+  db.query(sql, (err, result) => {
+    if (err) return res.status(500).json(err);
+    res.json(result);
+  });
+});
+
 // API to add an item to the `fg` table
 app.post("/api/additem", (req, res) => {
   const {

@@ -6,7 +6,7 @@ const TableDisplay = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/items")
+    axios.get("http://localhost:3000/api/fg")
       .then((response) => {
         setItems(response.data);
       })
@@ -17,8 +17,8 @@ const TableDisplay = () => {
 
   return (
     <div className="table-container">
-      <h2>Cut-Out Table Data</h2>
-      <table className="cutout-table">
+      <h2> Table Data</h2>
+      <table className="fg-table">
         <thead>
           <tr>
             <th>BNo</th>
@@ -31,6 +31,10 @@ const TableDisplay = () => {
             <th>BQty</th>
             <th>Plant</th>
             <th>Line</th>
+            <th>Damage Pcs</th>
+            <th>Cut Panel Shortage</th>
+            <th>Good Pcs</th>
+            <th>User</th>
             <th>Date</th>
           </tr>
         </thead>
@@ -45,15 +49,19 @@ const TableDisplay = () => {
                 <td>{item.Cut_No}</td>
                 <td>{item.Colour}</td>
                 <td>{item.Size}</td>
-                <td>{item.Qty}</td>
+                <td>{item.BQty}</td>
                 <td>{item.Plant}</td>
                 <td>{item.Line}</td>
+                <td>{item.Damage_Pcs}</td>
+                <td>{item.Cut_Panel_Shortage}</td>
+                <td>{item.Good_Pcs}</td>
+                <td>{item.User}</td>
                 <td>{item.Date}</td>
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan="11">No data available</td>
+              <td colSpan="15">No data available</td>
             </tr>
           )}
         </tbody>

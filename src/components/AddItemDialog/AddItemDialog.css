@@ -9,16 +9,18 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    
   }
   
   .dialog-content {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    width: 80%;
+    width: fit-content;
     max-width: auto;
-    overflow-x: auto;
+    overflow-y: auto;
     color: black;
+    height: 80%;
   }
   
   .dialog-table {
@@ -37,12 +39,14 @@
   
   .dialog-table th {
     background-color: #f4f4f4;
+    text-align: left;  
   }
   
   .dialog-table input {
-    width: 80px;
+    width: fit-content ;  
     padding: 5px;
     text-align: center;
+
   }
   
   .select-btn {
@@ -77,5 +81,20 @@
   .close-btn:hover {
     background-color: #e53935;
   }
+
+
+  .camera-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   
-  
+  @media (max-width: 768px) {
+    .dialog-content {
+      width: 95%;
+      max-width: none;
+    }
+  }
+
+
