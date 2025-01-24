@@ -5,8 +5,12 @@ import "./TableDisplay.css";
 const TableDisplay = () => {
   const [items, setItems] = useState([]);
 
+  
+  
+
+
   useEffect(() => {
-    axios.get("http://localhost:3000/api/fg")
+    axios.get("http://localhost:3000/api/items/fg")
       .then((response) => {
         setItems(response.data);
       })
@@ -17,7 +21,8 @@ const TableDisplay = () => {
 
   return (
     <div className="table-container">
-      <h2> Table Data</h2>
+      {/* <h2> Table Data</h2> */}
+      
       <table className="fg-table">
         <thead>
           <tr>

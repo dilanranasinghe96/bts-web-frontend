@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../../components/navbar/Navbar'
 import TableDisplay from '../../components/TableDisplay/TableDisplay'
+import Navbar from '../../components/navbar/Navbar'
 
 function HomePage() {
   return (

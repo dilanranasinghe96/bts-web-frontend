@@ -30,6 +30,7 @@ h2 {
 
 .fg-table th {
   background-color: #f4f4f4;
+ position: sticky;
 }
 
 .fg-table td{
