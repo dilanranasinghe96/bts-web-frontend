@@ -1,12 +1,12 @@
-import React from 'react'
-import TableDisplay from '../../components/TableDisplay/TableDisplay'
-import Navbar from '../../components/navbar/Navbar'
+import React from 'react';
+import Navbar from '../../components/navbar/Navbar';
+import './HomePage.css';
 
 function HomePage() {
   return (
-    <div>
+    <div className='homepage'>
       <Navbar />
-      <TableDisplay />
+      {/* <TableDisplay /> */}
     </div>
   )
 }

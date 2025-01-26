@@ -1,10 +1,14 @@
 .table-container {
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 100%;
-  height: 600px; /* Set a fixed height for the table container */
-  overflow-x: auto;
-  overflow-y: auto;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 100%;
+    /* height: 600px;  */
+    /* overflow-x: auto;
+    overflow-y: auto; */
 }
 
 h2 {
@@ -13,9 +17,11 @@ h2 {
 }
 
 .fg-table { 
+  padding: 20px;
   height: 100%; 
   border-collapse: collapse;
   margin-top: 20px;
+  width: 100%;  
   
 }
 
@@ -25,11 +31,12 @@ h2 {
   text-align: center;
   border: 1px solid #ddd;
   white-space: nowrap;
+  width: auto;
   
 }
 
 .fg-table th {
-  background-color: #f4f4f4;
+  background-color: hsl(0, 0%, 96%);
  position: sticky;
 }
 
@@ -55,5 +62,13 @@ h2 {
   .fg-table td {
     padding: 8px;
     font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fg-table th,
+  .fg-table td {
+    padding: 6px;
+    font-size: 10px;
   }
 }
